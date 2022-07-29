@@ -17,39 +17,46 @@
         <title>Calculation App</title>
     </head>   
     <body>
-        
-        <div>
-            <div>
-                <label>input:</label>
-                <input type="text" id="input1">
-            </div>
-            <div>
-                <label>input:</label>
-                <input type="text" id="input2">
-            </div>
-            <br>
-            <div>
-                <label>total:</label>
-                <input type="text" id="total">
-            </div>
-
-            <div class="buttons" style="width: 500px; padding-top:10px;">
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button id="divideOperator">÷</button>
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button id="timesOperator">×</button>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button  id="minusOperator">-</button>
-                <button>00</button>
-                <button>.</button>
-                <button>=</button>
-                <button id="plusOperator">+</button>
+        <div class="bg-dark">
+            <div class="vh-100 d-flex align-items-center justify-content-center">
+                <div class="calculatorBody bg-aqua">
+                    <div class="d-flex justify-content-around">
+                        <div class="text-black">CASIO</div>
+                        <div class="solarCell mb-2 text-yellow"></div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <textarea class="form-control" id="calculateArea" row="3"></textarea>
+                    </div>
+                    
+                    <div class="shadow-lg p-2 mb-3 bg-aqua" id="inputArea">
+                        <div class="buttons d-flex flex-wrap justify-content-between font-weight-bold" >
+                            <button>+/-</button>
+                            <button>税込</button>
+                            <button>税抜</button>
+                            <button>%</button>
+                            <button id="divideOperator">÷</button>
+                            <button>▶</button>
+                            <button>7</button>
+                            <button>8</button>
+                            <button>9</button>
+                            <button id="timesOperator">×</button>
+                            <button>C</button>
+                            <button>4</button>
+                            <button>5</button>
+                            <button>6</button>
+                            <button id="minusOperator">-</button>
+                            <button>AC</button>
+                            <button>1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button id="plusOperator">+</button>
+                            <button>0</button>
+                            <button>00</button>
+                            <button>.</button>
+                            <button id="outputOperator">=</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <script src="./main.js"></script>
