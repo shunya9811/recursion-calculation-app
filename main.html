@@ -17,43 +17,43 @@
         <title>Calculation App</title>
     </head>   
     <body>
-        <div class="bg-dark">
+        <div class="bg-dark" id="app">
             <div class="vh-100 d-flex align-items-center justify-content-center">
                 <div class="calculatorBody bg-aqua">
                     <div class="d-flex justify-content-around">
                         <div class="text-black">CASIO</div>
                         <div class="solarCell mb-2 text-yellow"></div>
                     </div>
-                    <div class="form-group mb-3">
-                        <textarea class="form-control" id="calculateArea" row="3"></textarea>
+                    <div class="calculateArea mb-3">
+                        <input type="text" class="form-control text-end" v-model="expression"></input>
+                        <p class="text-end" v-bind:total="total">{{total}}</p>
                     </div>
                     
                     <div class="shadow-lg p-2 mb-3 bg-aqua" id="inputArea">
                         <div class="buttons d-flex flex-wrap justify-content-between font-weight-bold" >
-                            <button>+/-</button>
-                            <button>税込</button>
-                            <button>税抜</button>
-                            <button>%</button>
-                            <button id="divideOperator">÷</button>
+                            <button v-on:click="signInversion">+/-</button>
+                            <button v-on:click="taxIncluded">税込</button>
+                            <button v-on:click="taxExcluded">税抜</button>
+                            <button v-on:click="setTaxRate">%</button>
+                            <button id="divideOperator" v-on:click="addOperator('/')">÷</button>
                             <button>▶</button>
-                            <button>7</button>
-                            <button>8</button>
-                            <button>9</button>
-                            <button id="timesOperator">×</button>
-                            <button>C</button>
-                            <button>4</button>
-                            <button>5</button>
-                            <button>6</button>
-                            <button id="minusOperator">-</button>
-                            <button>AC</button>
-                            <button>1</button>
-                            <button>2</button>
-                            <button>3</button>
-                            <button id="plusOperator">+</button>
-                            <button>0</button>
-                            <button>00</button>
-                            <button>.</button>
-                            <button id="outputOperator">=</button>
+                            <button v-on:click="addOperand('7')">7</button>
+                            <button v-on:click="addOperand('8')">8</button>
+                            <button v-on:click="addOperand('9')">9</button>
+                            <button id="timesOperator" v-on:click="addOperator('*')">×</button>
+                            <button v-on:click="clear">C</button> 
+                            <button v-on:click="addOperand('4')">4</button>
+                            <button v-on:click="addOperand('5')">5</button>
+                            <button v-on:click="addOperand('6')">6</button>
+                            <button id="minusOperator" v-on:click="addOperator('-')">-</button>
+                            <button v-on:click="allClear">AC</button>
+                            <button v-on:click="addOperand('1')">1</button>
+                            <button v-on:click="addOperand('2')">2</button>
+                            <button v-on:click="addOperand('3')">3</button>
+                            <button id="plusOperator" v-on:click="addOperator('+')">+</button>
+                            <button v-on:click="addOperand('0')">0</button>
+                            <button v-on:click="addOperand('.')">.</button> <!--少数の機能は未実装-->
+                            <button id="outputOperator" v-on:click="displayOutput">=</button>
                         </div>
                     </div>
                 </div>
