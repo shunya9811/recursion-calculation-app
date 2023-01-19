@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="js  ">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -26,7 +26,7 @@
                     </div>
                     <div class="calculateArea mb-3">
                         <input type="text" class="form-control text-end" v-model="expression"></input>
-                        <p class="text-end" v-bind:total="total">{{total}}</p>
+                        <p class="text-end" v-bind:total="total">{{total | number_format}}</p>
                     </div>
                     
                     <div class="shadow-lg p-2 mb-3 bg-aqua" id="inputArea">

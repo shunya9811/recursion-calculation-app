@@ -147,7 +147,8 @@ var vm = new Vue({
     //totalとexpressionに文字数の制限をつける(未完成)
     filters: {
         number_format: function(val){
-            if (val.length > 14) return val.substring(0,14);
+            if (val.length > 13) return val.substring(0,13);
+            return val;
         }
     }
 });
